@@ -5,20 +5,20 @@ const App = () => {
   const [total, setTotal] = useState(0)
 
 
-  useEffect(()=>{
-    alert('render!')
-    //first render
+  // useEffect(()=>{
+  //   alert('render!')
+  //   //first render
 
-    //page load --0
-    //page load --1
+  //   //page load --0
+  //   //page load --1
 
-    return ()=>{
-      alert('close!')
-      //cleanup
-      //first page close --0;
-      //first page close --1;
-    }
-  })
+  //   return ()=>{
+  //     alert('close!')
+  //     //cleanup
+  //     //first page close --0;
+  //     //first page close --1;
+  //   }
+  // })
 
 
 
@@ -64,13 +64,19 @@ const App = () => {
   // },[count])
   
   return (
-    <div>
-      <h1>Hello, World!</h1>
-      <h2>Count: {count}</h2>
-      <h2>Total: {total}</h2>
-      <button onClick={()=>setCount(count+1)}>count</button>
-      <button onClick={()=>setTotal(total+1)}>Total</button>
+ 
+<div className="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ...">
+  <img className="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="/img/erin-lindford.jpg" alt="" />
+  <div className="space-y-2 text-center sm:text-left">
+    <div className="space-y-0.5">
+      <p className="text-lg font-semibold text-black">Erin Lindford</p>
+      <p className="font-medium text-gray-500">Product Engineer</p>
     </div>
+    <button className="border-purple-200 text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700 ...">
+      Message
+    </button>
+  </div>
+</div>
   )
 }
 
