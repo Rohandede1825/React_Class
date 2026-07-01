@@ -1,0 +1,11 @@
+#container{
+    display: flex;
+    color: #fff;
+    /* padding: 20px; */
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    width: 200vh;
+
+
+}

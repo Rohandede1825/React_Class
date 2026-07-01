@@ -4,7 +4,7 @@ import ChildA from './components/ChildA'
 
 
 //1. create Context
-const UserContext = createContext();
+// const UserContext = createContext();
 //2.wrap up all the child inside provider
 //3.pass the value
 //4.get value inside the cosumer 
@@ -12,25 +12,25 @@ const UserContext = createContext();
 const ThemeContext = createContext()
 
 const App = () => {
-  const [user, SetUser] = useState({ name: "rohan" })
+  // const [user, SetUser] = useState({ name: "rohan" })
 
   const [theme, setTheme] = useState('light');
   return (
     <div>
-      <UserContext.Provider value={user}>
+      {/* <UserContext.Provider value={user}> */}
 
         <ThemeContext.Provider value={{ theme, setTheme }}>
-          <div style={{ backgroundColor: theme === 'light' ? 'blue' : 'black' }}>
+          <div style={{ backgroundColor: theme === 'light' ? 'red' : 'black' }}>
             <ChildA />
           </div>
 
         </ThemeContext.Provider>
-      </UserContext.Provider>
+      {/* </UserContext.Provider> */}
 
     </div>
   )
 }
 
 export default App
-export { UserContext }
+// export { UserContext }
 export { ThemeContext }

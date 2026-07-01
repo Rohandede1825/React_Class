@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import {UserContext} from '../App'
+// import {UserContext} from '../App'
 import { ThemeContext } from '../App'
+import './childc.css'
 
 const ChildC = () => {
 
-const user = useContext(UserContext)
+// const user = useContext(UserContext)
 const {theme, setTheme}=useContext(ThemeContext);
 
   function handleClick(){
@@ -16,11 +17,11 @@ const {theme, setTheme}=useContext(ThemeContext);
 }
 
 return (
-    <div>
+    <div id='container'>
         <button onClick={handleClick}>
             click
         </button>
-        {user.name}
+        {/* {user.name} */}
     </div>
   )
 }
